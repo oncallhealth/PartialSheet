@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-
+@available(iOS 13, *)
 public struct PartialSheetStyle {
 
     /// Background enum
@@ -107,6 +107,7 @@ public struct PartialSheetStyle {
     }
 }
 
+@available(iOS 13, *)
 extension PartialSheetStyle {
 
     /** A default Style for the PartialSheet with system colors.

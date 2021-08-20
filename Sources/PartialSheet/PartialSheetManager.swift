@@ -21,6 +21,7 @@ import SwiftUI
  )
  ```
  */
+@available(iOS 13, *)
 public class PartialSheetManager: ObservableObject {
 
     /// Published var to present or hide the partial sheet

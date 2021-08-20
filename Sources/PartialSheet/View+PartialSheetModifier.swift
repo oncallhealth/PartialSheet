@@ -9,6 +9,7 @@
 import SwiftUI
 
 @available(iOSApplicationExtension, unavailable)
+@available(iOS 13, *)
 extension View {
     /**
      Add a PartialSheet to the current view. You should attach it to your Root View.

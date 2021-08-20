@@ -11,6 +11,7 @@ import Combine
 
 /// This is the modifier for the Partial Sheet
 @available(iOSApplicationExtension, unavailable)
+@available(iOS 13, *)
 struct PartialSheet: ViewModifier {
     
     // MARK: - Public Properties
@@ -153,6 +154,7 @@ struct PartialSheet: ViewModifier {
 
 //MARK: - Platfomr Specific Sheet Builders
 @available(iOSApplicationExtension, unavailable)
+@available(iOS 13, *)
 extension PartialSheet {
 
     //MARK: - Mac and iPad Sheet Builder
@@ -251,6 +253,7 @@ extension PartialSheet {
 
 // MARK: - Drag Gesture & Handler
 @available(iOSApplicationExtension, unavailable)
+@available(iOS 13, *)
 extension PartialSheet {
 
     /// Create a new **DragGesture** with *updating* and *onEndend* func
@@ -323,6 +326,7 @@ extension PartialSheet {
 
 // MARK: - Keyboard Handlers Methods
 @available(iOSApplicationExtension, unavailable)
+@available(iOS 13, *)
 extension PartialSheet {
 
     /// Add the keyboard offset
@@ -356,7 +360,8 @@ extension PartialSheet {
 }
 
 // MARK: - PreferenceKeys Handlers
-@available(iOSApplicationExtension, unavailable) 
+@available(iOSApplicationExtension, unavailable)
+@available(iOS 13, *)
 extension PartialSheet {
 
     /// Preference Key for the Sheet Presener
@@ -382,6 +387,7 @@ extension PartialSheet {
 
 }
 
+@available(iOS 13, *)
 struct PartialSheetAddView<Base: View, InnerContent: View>: View {
     @EnvironmentObject var partialSheetManager: PartialSheetManager
     
@@ -420,6 +426,7 @@ struct PartialSheetAddView<Base: View, InnerContent: View>: View {
     }
 }
 
+@available(iOS 13, *)
 public extension View {
     func partialSheet<Content: View>(isPresented: Binding<Bool>, @ViewBuilder content: @escaping () -> Content) -> some View {
         PartialSheetAddView(isPresented: isPresented, content: content, base: self)

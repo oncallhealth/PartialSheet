@@ -9,6 +9,7 @@
 import SwiftUI
 
 /// An UIViewRepresentable for the UIBlurEffectView
+@available(iOS 13, *)
 struct BlurEffectView: UIViewRepresentable {
 
     /// The style of the Blut Effect View

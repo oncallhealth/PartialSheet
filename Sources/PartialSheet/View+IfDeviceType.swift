@@ -26,6 +26,7 @@ internal var deviceType: DeviceType = {
     #endif
 }()
 
+@available(iOS 13, *)
 internal extension View {
 
     @ViewBuilder func ifIs<T>(_ condition: Bool, transform: (Self) -> T) -> some View where T: View {
